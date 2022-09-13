@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body, html {
+    height: 100vh;
+    font-family: Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 15% auto auto 10%;
+    grid-template-areas: 
+        "header"
+        "sidebar"
+        "main1"
+        "main2"
+        "footer";
+
+}
+
+aside {
+    padding-right: 5px;
+    grid-area: sidebar;
+    background-color: #007FFF;
+}
+
+header {
+    background-image: url(img/bannergroot.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-area: header;
+    background-color: #91c8ff;
+}
+
+header h1 {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    font-weight: bolder;
+    position: relative;
+    left: 50px;
+}
+
+.main1 {
+    grid-area: main1;
+    background-color: deepskyblue;
+    padding: 5px;
+}
+
+.main2 {
+    grid-area: main2;
+    background-color: rgb(3, 127, 168);
+    padding: 5px;
+}
+
+.dorpstraat {
+    margin: 5px;
+    border-radius: 15px;
+    width: 320px;
+    float: right;
+}
+
+.watertoren {
+    margin: 5px;
+    border-radius: 15px;
+    width: 150px;
+    float: right;
+}
+
+footer {
+    text-align: right;
+    font-size: smaller;
+    grid-area: footer;
+    background-color: #006edb;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 27% 27% 27%;
+    grid-template-rows: 20% 30% auto 10%;
+    grid-template-areas: 
+        "header  header  header  header"
+        "sidebar main1   main1   main2"
+        "sidebar main1   main1   main2"
+        "footer  footer  footer  footer";
+}
+
+    
+}
